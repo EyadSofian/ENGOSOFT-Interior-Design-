@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="hero-circle-2" />
       <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 py-12 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Text Column */}
+          {/* Text Column - Right in RTL */}
           <div className="order-1 text-white">
             <span className="inline-block px-4 py-1.5 bg-white/15 backdrop-blur-sm rounded-full text-sm font-medium mb-5">
               لقاء تعريفي مجاني
@@ -77,17 +77,19 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Poster Image Column */}
-          <div className="order-2 flex justify-center">
-            <div className="relative bg-primary-blue/20 rounded-[28px] overflow-hidden shadow-2xl max-w-[380px] w-full">
-              <Image
-                src="/assets/interior-design-webinar.png"
-                alt="بوستر لقاء التصميم الداخلي والديكور"
-                width={600}
-                height={800}
-                className="w-full h-auto object-contain"
-                priority
-              />
+          {/* Speaker Portrait Column - Left in RTL */}
+          <div className="order-2 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-[380px] lg:max-w-[420px]">
+              <div className="relative rounded-[28px] overflow-hidden shadow-2xl bg-primary-blue/20">
+                <Image
+                  src="/assets/mohamed-ibrahim-othman.png"
+                  alt="المهندس محمد إبراهيم عثمان، محاضر لقاء التصميم الداخلي"
+                  width={750}
+                  height={850}
+                  priority
+                  className="w-full h-auto object-contain object-top"
+                />
+              </div>
             </div>
           </div>
         </div>

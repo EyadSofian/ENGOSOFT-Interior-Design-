@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const navLinks = [
   { label: "عن اللقاء", href: "#content" },
@@ -14,11 +15,13 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white border-b border-border-color" style={{ height: "76px" }}>
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
         <a href="#registration" className="flex-shrink-0">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/assets/engosoft-logo.png"
-            alt="شعار ENGOSOFT"
-            className="h-10 w-auto"
+            alt="شعار إنجوسوفت"
+            width={165}
+            height={65}
+            priority
+            className="w-[105px] h-auto sm:w-[150px] md:w-[155px] lg:w-[165px]"
           />
         </a>
 

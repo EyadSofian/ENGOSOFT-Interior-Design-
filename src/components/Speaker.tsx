@@ -15,13 +15,16 @@ export default function Speaker() {
         <div className="speaker-gradient rounded-[28px] overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
             {/* Image side */}
-            <div className="relative min-h-[300px] md:min-h-[400px]">
-              <Image
-                src="/assets/interior-design-webinar.png"
-                alt="صورة المهندس محمد إبراهيم عثمان"
-                fill
-                className="object-cover object-top"
-              />
+            <div className="flex items-center justify-center p-6 md:p-0 bg-primary-blue/10">
+              <div className="relative w-full max-w-[340px] md:max-w-none md:w-full aspect-[3/4]">
+                <Image
+                  src="/assets/mohamed-ibrahim-othman.png"
+                  alt="المهندس محمد إبراهيم عثمان، محاضر لقاء التصميم الداخلي"
+                  width={750}
+                  height={850}
+                  className="w-full h-full object-contain object-top drop-shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
+                />
+              </div>
             </div>
 
             {/* Text side */}
