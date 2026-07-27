@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  --primary-blue: #0354D8;
+  --deep-navy: #071425;
+  --accent-green: #4CFA76;
+  --white: #FFFFFF;
+  --light-background: #F5F8FF;
+  --muted-text: #5D6B82;
+  --border-color: #DCE6F7;
+}
+
+@theme inline {
+  --color-primary-blue: var(--primary-blue);
+  --color-deep-navy: var(--deep-navy);
+  --color-accent-green: var(--accent-green);
+  --color-light-background: var(--light-background);
+  --color-muted-text: var(--muted-text);
+  --color-border-color: var(--border-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-family: "Alexandria", Arial, Helvetica, sans-serif;
+  background: var(--white);
+  color: var(--deep-navy);
+}
+
+input::placeholder,
+select::placeholder {
+  color: #9BA8BF;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #071425 0%, #0354D8 50%, #0a3a9e 100%);
+}
+
+.hero-circle-1 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(3, 84, 216, 0.15);
+  top: -200px;
+  left: -100px;
+}
+
+.hero-circle-2 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(76, 250, 118, 0.05);
+  bottom: -100px;
+  right: -50px;
+}
+
+.speaker-gradient {
+  background: linear-gradient(135deg, #071425 0%, #0354D8 100%);
+}
+
+input[type="tel"],
+input[type="email"],
+input[type="text"],
+select {
+  height: 52px;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  input[type="tel"],
+  input[type="email"],
+  input[type="text"],
+  select {
+    height: 56px;
+  }
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.accordion-content.open {
+  max-height: 200px;
+}
