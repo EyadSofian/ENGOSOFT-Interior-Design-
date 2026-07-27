@@ -69,8 +69,8 @@ select::placeholder {
   right: -50px;
 }
 
-.speaker-gradient {
-  background: linear-gradient(135deg, #071425 0%, #0354D8 100%);
+.speaker-spotlight {
+  background: linear-gradient(145deg, #071B3B 0%, #0A2F73 55%, #0354D8 100%);
 }
 
 input[type="tel"],
